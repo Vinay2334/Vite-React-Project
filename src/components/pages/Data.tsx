@@ -10,13 +10,11 @@ const Data: React.FC = () => {
     queryKey: ['posts'],
     queryFn: getPosts,
   })
-
-  if(status === 'loading') return <h1>loading...</h1>
   if(status === 'error') return <h1>{JSON.stringify(error)}</h1>
   return (
     <Container sx={{marginTop: '20pt'}}>
       <Stack spacing={10}>
-      <PostTable posts={posts}/>
+      <PostTable posts={posts} status={status}/>
       <DepartmentList/>
       </Stack>
     </Container>

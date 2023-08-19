@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Stack, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import { useNavigate } from "react-router-dom";
 
 type formInputs = {
@@ -19,7 +18,7 @@ const Home: React.FC = () => {
   });
   const navigate = useNavigate();
 
-  const { register, handleSubmit, formState, control } = form;
+  const { register, handleSubmit, formState } = form;
   const { errors } = formState;
   const onSubmit = (data: formInputs) => {
     localStorage.setItem("user-data", JSON.stringify(data));
@@ -76,7 +75,6 @@ const Home: React.FC = () => {
           </Button>
         </Stack>
       </form>
-      <DevTool control={control} />
     </Box>
   );
 };

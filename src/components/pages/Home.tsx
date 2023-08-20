@@ -31,9 +31,17 @@ const Home: React.FC = () => {
       alignItems="center"
       justifyContent="center"
       height="100%"
+      width='100%'
+      className='BOX'
     >
+      <Box sx={{width : {
+        xs: '70%',
+        sm: '40%',
+      }}}>
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <Stack spacing={5} width={400}>
+        <Stack spacing={5} 
+        //width={400} 
+        >
           <TextField
             required
             label="Name"
@@ -75,6 +83,7 @@ const Home: React.FC = () => {
           </Button>
         </Stack>
       </form>
+      </Box>
     </Box>
   );
 };

@@ -7,7 +7,6 @@ type RequireUserProps = {
 };
 
 const RequireUser: React.FC<RequireUserProps> = ({ children }) => {
-    console.log('Requireuser');
   const navigate = useNavigate();
   const getUser = () => {
     if (localStorage.getItem("user-data") === null) {

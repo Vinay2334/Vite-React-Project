@@ -25,7 +25,7 @@ const columns: GridColDef[] = [
   {
     field: "body",
     headerName: "Body",
-    flex: 1,
+    width: 750,
     editable: true,
   },
 ];

@@ -10,7 +10,7 @@ const RequireUser: React.FC<RequireUserProps> = ({ children }) => {
   const navigate = useNavigate();
   const getUser = () => {
     if (localStorage.getItem("user-data") === null) {
-      navigate("/");
+      navigate("/", {replace: true});
       if (location.pathname === "/") {
         toast.warning('Submit the form to access this page');
       }

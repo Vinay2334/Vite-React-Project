@@ -2,6 +2,7 @@ import React from "react";
 import { AppBar, Toolbar, IconButton, Stack, Link } from "@mui/material";
 
 const Navbar: React.FC = () => {
+  
   return (
     <AppBar position="static">
       <Toolbar sx={{ gap: "14px" }}>
